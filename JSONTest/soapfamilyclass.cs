@@ -13,7 +13,7 @@ namespace JSONTest
         {
             daughter, son, niece, nephew, cousin, grandfather, grandmother, aunt, uncle,
             mother, father, half_brother, half_sister, brother,
-            sister, step_son, step_daughter, granddaughter, grandson, grandniece, grandnephew
+            sister, step_son, step_daughter, granddaughter, grandson, grandniece, grandnephew, other
         }
         public enum e_blood_relation { in_law, biological, adoptive, na }
         public enum e_lineage { maternal, paternal, na }
