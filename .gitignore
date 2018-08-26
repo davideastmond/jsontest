@@ -1,2 +1,2 @@
-/.vs/*
-/packages/Newtonsoft.Json.11.0.2/*
+jsontest/.vs/*
+jsontest/packages/Newtonsoft.Json.11.0.2/*
