@@ -68,6 +68,8 @@ namespace JSONTest
             SoapCharacter kristen_dimera = new SoapCharacter("Kristen", "DiMera");
             SoapCharacter stefano_dimera = new SoapCharacter("Stefano", "DiMera");
             SoapCharacter stefan_o_dimera = new SoapCharacter("Stefan", "DiMera");
+            SoapCharacter andre_dimera = new SoapCharacter("Andre", "DiMera");
+            SoapCharacter tony_dimera = new SoapCharacter("Tony", "DiMera");
 
             SoapCharacter vivian_alamaine = new SoapCharacter("Vivian", "Alamain");
 
@@ -137,11 +139,29 @@ namespace JSONTest
 
             SoapCharacter rafe_hernandez = new SoapCharacter("Rafe", "Hernandez");
             SoapCharacter gabriella_hernandez = new SoapCharacter("Gabriella", "Hernandez");
+            SoapCharacter end_tag = new SoapCharacter("end", "tag");
 
             isabella_toscano.isAlive = false;
+            andre_dimera.isAlive = false;
+            jack_deveraux.isAlive = false;
+            stefano_dimera.isAlive = false;
+            tony_dimera.isAlive = false;
+
+            // Andre's family
+            andre_dimera.SetSpouse(kate_dimera);
+            andre_dimera.CreateNewFamilyMember(chad_dimera, FamilyMember.e_familial_relationship.half_brother, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.paternal
+                , FamilyMember.e_generation.none);
+            andre_dimera.CreateNewFamilyMember(alexandra_carver, FamilyMember.e_familial_relationship.half_sister, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.paternal
+                , FamilyMember.e_generation.none);
+            andre_dimera.CreateNewFamilyMember(ej_dimera, FamilyMember.e_familial_relationship.half_brother, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.paternal
+                , FamilyMember.e_generation.none);
+            andre_dimera.CreateNewFamilyMember(tony_dimera, FamilyMember.e_familial_relationship.half_brother, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.paternal
+                , FamilyMember.e_generation.none);
 
             // Kate's info
             kate_dimera.FamilyMembership.Add(SoapCharacter.SoapFamily.DiMera);
+            kate_dimera.FamilyMembership.Add(SoapCharacter.SoapFamily.Reed);
+            kate_dimera.FamilyMembership.Add(SoapCharacter.SoapFamily.Roberts);
             kate_dimera.children.Add(lucas_horton);
             kate_dimera.children.Add(austin_reed);
             kate_dimera.children.Add(billie_reed);
@@ -162,13 +182,14 @@ namespace JSONTest
             chad_dimera.children.Add(thomas_dimera);
             chad_dimera.CreateNewFamilyMember(kristen_dimera, FamilyMember.e_familial_relationship.sister, FamilyMember.e_blood_relation.adoptive, FamilyMember.e_lineage.na
                 , FamilyMember.e_generation.none);
+            
 
             // Chad's Familials
             chad_dimera.CreateNewFamilyMember(jennifer_horton, FamilyMember.e_familial_relationship.mother, 
                 FamilyMember.e_blood_relation.in_law, FamilyMember.e_lineage.na, FamilyMember.e_generation.none);
             chad_dimera.CreateNewFamilyMember(jack_deveraux, FamilyMember.e_familial_relationship.father, FamilyMember.e_blood_relation.in_law
                 , FamilyMember.e_lineage.na, FamilyMember.e_generation.none);
-            chad_dimera.CreateNewFamilyMember(jack_deveraux, FamilyMember.e_familial_relationship.brother, FamilyMember.e_blood_relation.in_law
+            chad_dimera.CreateNewFamilyMember(jj_deveraux, FamilyMember.e_familial_relationship.brother, FamilyMember.e_blood_relation.in_law
                 , FamilyMember.e_lineage.na, FamilyMember.e_generation.none);
             chad_dimera.CreateNewFamilyMember(theo_carver, FamilyMember.e_familial_relationship.nephew, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.paternal
                 , FamilyMember.e_generation.none);
@@ -318,10 +339,35 @@ namespace JSONTest
             marlena_evans.CreateNewFamilyMember(will_horton, FamilyMember.e_familial_relationship.grandson, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.na
                 , FamilyMember.e_generation.none);
 
+            // Jack Deveraux
+            jack_deveraux.SetMaritalStatus(MaritalStatus.Widowed);
+            jack_deveraux.children.Add(jj_deveraux);
+            jack_deveraux.children.Add(abi_dimera);
+            jack_deveraux.FamilyMembership.Add(SoapCharacter.SoapFamily.Deveraux);
+            jack_deveraux.FamilyMembership.Add(SoapCharacter.SoapFamily.Johnson);
+
+            // Jack's family
+            jack_deveraux.CreateNewFamilyMember(chad_dimera, FamilyMember.e_familial_relationship.son, FamilyMember.e_blood_relation.in_law, FamilyMember.e_lineage.na
+                , FamilyMember.e_generation.none);
+            jack_deveraux.CreateNewFamilyMember(thomas_dimera, FamilyMember.e_familial_relationship.grandson, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.na, FamilyMember.e_generation.none);
+            jack_deveraux.CreateNewFamilyMember(steve_johnson, FamilyMember.e_familial_relationship.brother, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.na,
+                 FamilyMember.e_generation.none);
+            jack_deveraux.CreateNewFamilyMember(adrienne_johnson, FamilyMember.e_familial_relationship.sister, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.na
+                , FamilyMember.e_generation.none);
+            jack_deveraux.CreateNewFamilyMember(jackson_sonny_kiriakis, FamilyMember.e_familial_relationship.nephew, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.na,
+                 FamilyMember.e_generation.none);
+            jack_deveraux.CreateNewFamilyMember(kayla_johnson, FamilyMember.e_familial_relationship.sister, FamilyMember.e_blood_relation.in_law, FamilyMember.e_lineage.na
+                , FamilyMember.e_generation.none);
+            jack_deveraux.CreateNewFamilyMember(stephanie_johnson, FamilyMember.e_familial_relationship.niece, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.na
+                ,
+                 FamilyMember.e_generation.none);
+            jack_deveraux.CreateNewFamilyMember(trip_johnson, FamilyMember.e_familial_relationship.nephew, FamilyMember.e_blood_relation.biological, FamilyMember.e_lineage.na, FamilyMember.e_generation.none);
+            jack_deveraux.CreateNewFamilyMember(lucas_horton, FamilyMember.e_familial_relationship.brother, FamilyMember.e_blood_relation.in_law, FamilyMember.e_lineage.na, FamilyMember.e_generation.none);
+
 
             masterList.Add(chad_dimera); masterList.Add(abi_dimera); masterList.Add(thomas_dimera);
             masterList.Add(steve_johnson); masterList.Add(stephanie_johnson); masterList.Add(kayla_johnson); masterList.Add(alice_horton);
-            masterList.Add(stephanie_johnson); masterList.Add(tom_horton); masterList.Add(jj_deveraux);
+            masterList.Add(tom_horton); masterList.Add(jj_deveraux);
             masterList.Add(joey_johnson); masterList.Add(stefano_dimera); masterList.Add(madeline_woods);
             masterList.Add(jennifer_horton); masterList.Add(laura_horton); masterList.Add(tom_horton);
             masterList.Add(trip_johnson); masterList.Add(jackson_sonny_kiriakis); masterList.Add(will_horton); masterList.Add(maggie_kiriakis);
@@ -329,7 +375,9 @@ namespace JSONTest
             masterList.Add(brady_black); masterList.Add(tate_black); masterList.Add(teresa_donovan); masterList.Add(kristen_dimera);
             masterList.Add(john_black); masterList.Add(victor_kiriakis); masterList.Add(paul_narita); masterList.Add(marlena_evans);
             masterList.Add(claire_brady); masterList.Add(shawn_douglas_brady); masterList.Add(isabella_toscano); masterList.Add(rafe_hernandez); masterList.Add(gabriella_hernandez);
-            masterList.Add(samantha_dimera); masterList.Add(chelsea_brady);
+            masterList.Add(samantha_dimera); masterList.Add(chelsea_brady); masterList.Add(abraham_carver); masterList.Add(theo_carver); masterList.Add(alexandra_carver);
+            masterList.Add(celeste_perrault); masterList.Add(end_tag); masterList.Add(andre_dimera); masterList.Add(tony_dimera); 
+            
         }
         private void ListenerTask()
         {

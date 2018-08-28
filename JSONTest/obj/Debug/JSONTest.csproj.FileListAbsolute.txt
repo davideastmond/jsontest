@@ -1,8 +1,6 @@
 F:\Users\David\Source\Repos\JSONTest\JSONTest\bin\Debug\JSONTest.exe.config
 F:\Users\David\Source\Repos\JSONTest\JSONTest\bin\Debug\JSONTest.exe
 F:\Users\David\Source\Repos\JSONTest\JSONTest\bin\Debug\JSONTest.pdb
-F:\Users\David\Source\Repos\JSONTest\JSONTest\bin\Debug\JSONTest.exe.CodeAnalysisLog.xml
-F:\Users\David\Source\Repos\JSONTest\JSONTest\bin\Debug\JSONTest.exe.lastcodeanalysissucceeded
 F:\Users\David\Source\Repos\JSONTest\JSONTest\bin\Debug\Newtonsoft.Json.dll
 F:\Users\David\Source\Repos\JSONTest\JSONTest\bin\Debug\Newtonsoft.Json.xml
 F:\Users\David\Source\Repos\JSONTest\JSONTest\obj\Debug\JSONTest.csprojAssemblyReference.cache
