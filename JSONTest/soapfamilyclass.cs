@@ -39,6 +39,16 @@ namespace JSONTest
 
         public List<SoapFamily> FamilyMembership { get; set; }
         private List<FamilyMember> _IndividualFamilyMembers = new List<FamilyMember>();
+
+        private int _ID; // ID number - should be randomly generated
+        public int ID
+        {
+            get
+            {
+                return _ID;
+
+            }
+        }
         public List<FamilyMember> Ind_FamilyMembers
         {
             get
